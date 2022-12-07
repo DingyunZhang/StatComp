@@ -3,3 +3,5 @@
 export(SGD_C)
 export(SRRR.variational)
 import(MASS)
+import(Rcpp)
+useDynLib(StatComp22004)

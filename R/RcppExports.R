@@ -17,6 +17,8 @@
 #' res <- SGD_C(matrix, result, theta, loss)
 #' print(res)
 #' }
+#' @import Rcpp
+#' @useDynLib StatComp22004
 #' @export
 SGD_C <- function(matrix, result, theta, loss) {
     .Call('_StatComp22004_SGD_C', PACKAGE = 'StatComp22004', matrix, result, theta, loss)

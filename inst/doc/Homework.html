@@ -12,7 +12,7 @@
 
 <meta name="author" content="Dingyun Zhang" />
 
-<meta name="date" content="2022-12-01" />
+<meta name="date" content="2022-12-07" />
 
 <title>Introduction2 to StatComp22004</title>
 
@@ -341,7 +341,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Introduction2 to StatComp22004</h1>
 <h4 class="author">Dingyun Zhang</h4>
-<h4 class="date">2022-12-01</h4>
+<h4 class="date">2022-12-07</h4>
 
 
 
@@ -549,7 +549,7 @@ results (scatter plot and regression line).</p></li>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>test<span class="ot">&lt;-</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fl">1e4</span>)</span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">quick_sort</span>(test))[<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## user.self 
-##      0.04</code></pre>
+##      0.03</code></pre>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">quick_sort</span>(test)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># show the result of fast sort algorithm</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>test[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div>
@@ -577,7 +577,7 @@ results (scatter plot and regression line).</p></li>
 <span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>an <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">computation_time</span>(n[<span class="dv">1</span>]),<span class="fu">computation_time</span>(n[<span class="dv">2</span>]),<span class="fu">computation_time</span>(n[<span class="dv">3</span>]),</span>
 <span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>       <span class="fu">computation_time</span>(n[<span class="dv">4</span>]),<span class="fu">computation_time</span>(n[<span class="dv">5</span>]))</span>
 <span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>an</span></code></pre></div>
-<pre><code>## [1] 0.0135 0.0274 0.0602 0.0863 0.1177</code></pre>
+<pre><code>## [1] 0.0145 0.0296 0.0616 0.0924 0.1247</code></pre>
 <p>Now we fit a linear model with control variable <span class="math inline">\(t_n\)</span> and response <span class="math inline">\(a_n\)</span>, and draw a scatter plot and the red
 regression line.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tn <span class="ot">&lt;-</span> n<span class="sc">*</span><span class="fu">log</span>(n)</span>
@@ -586,7 +586,7 @@ regression line.</p>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">coefficients</span>(mylm)</span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tn, an, <span class="at">main=</span><span class="st">&quot;Regression line&quot;</span>)</span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, b[<span class="dv">1</span>]<span class="sc">+</span>b[<span class="dv">2</span>]<span class="sc">*</span>x, <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 <div id="exercise-5.6" class="section level3">
 <h3>Exercise 5.6</h3>
@@ -1344,8 +1344,8 @@ underlying distribution is normal.</p>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
 <span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span></code></pre></div>
 <pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 1018196 54.4    1805330 96.5  1805330 96.5
-## Vcells 1811647 13.9    8388608 64.0  8388519 64.0</code></pre>
+## Ncells 1018043 54.4    1805330 96.5  1805330 96.5
+## Vcells 1811313 13.9    8388608 64.0  8388545 64.0</code></pre>
 </div>
 <div id="exercises-7.11" class="section level3">
 <h3>Exercises 7.11</h3>
@@ -1440,8 +1440,8 @@ page 209 ~ page 211.</p>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span></code></pre></div>
 <pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 1019974 54.5    1805330 96.5  1805330 96.5
-## Vcells 1820493 13.9    8388608 64.0  8388519 64.0</code></pre>
+## Ncells 1019821 54.5    1805331 96.5  1805331 96.5
+## Vcells 1820159 13.9    8388608 64.0  8388545 64.0</code></pre>
 </div>
 <div id="exercises-8.2" class="section level3">
 <h3>Exercises 8.2</h3>
@@ -1491,8 +1491,8 @@ samples.</p>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
 <span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span></code></pre></div>
 <pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells 1023724 54.7    1805330 96.5  1805330 96.5
-## Vcells 1831113 14.0    8388608 64.0  8388519 64.0</code></pre>
+## Ncells 1023571 54.7    1805331 96.5  1805331 96.5
+## Vcells 1830779 14.0    8388608 64.0  8388545 64.0</code></pre>
 <p><span style="color:red">There is a crucial point of this code we
 should pay attention to.</span></p>
 <p>In p.spcor function,it returns estimate <span class="math inline">\(\rho\)</span> of cor.test instead of statistic
@@ -2660,9 +2660,9 @@ same. Besides, we can draw the scatter plot of each.</p>
 <span id="cb139-2"><a href="#cb139-2" aria-hidden="true" tabindex="-1"></a>ts <span class="ot">&lt;-</span> <span class="fu">microbenchmark</span>(<span class="at">gibbsR =</span> <span class="fu">gibbsR</span>(mu, sigma, rho, mu, N),</span>
 <span id="cb139-3"><a href="#cb139-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">gibbsC =</span> <span class="fu">gibbsC</span>(mu, sigma, rho, mu, N))</span>
 <span id="cb139-4"><a href="#cb139-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ts)[, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>)]</span></code></pre></div>
-<pre><code>##     expr       lq   median      uq
-## 1 gibbsR 27.55185 28.47005 29.6651
-## 2 gibbsC  1.60135  1.64800  1.7145</code></pre>
+<pre><code>##     expr      lq   median       uq
+## 1 gibbsR 29.8783 30.69990 31.51485
+## 2 gibbsC  1.7280  1.74655  1.79035</code></pre>
 <p>As we can see, the Rcpp function runs faster than pure R
 language.</p>
 </div>

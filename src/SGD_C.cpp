@@ -17,6 +17,7 @@ using namespace Rcpp;
 //' res <- SGD_C(matrix, result, theta, loss)
 //' print(res)
 //' }
+//' @import Rcpp
 //' @export
 // [[Rcpp::export]]
 NumericVector SGD_C(IntegerMatrix matrix, NumericVector result, NumericVector theta, float loss){

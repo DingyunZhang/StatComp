@@ -24,11 +24,12 @@ The algorithm is described in "https://www.tandfonline.com/doi/full/10.1080/0162
 \examples{
 \dontrun{
 r <- 2
-p <- 6
-q <- 6
+p <- 2
+q <- 2
+n <- 2
 lambda <- rep(0.5, p)
-X <- matrix(0, nrow = n, ncol = p)
-Y <- matrix(0, nrow = n, ncol = q)
+X <- matrix(c(1.0604068, -0.454802, 0.7287505,-2.014123), nrow = n, ncol = p)
+Y <- matrix(c(-0.5825189, 0.3734626, -0.4302581, -0.1078283), nrow = n, ncol = q)
 res <- SRRR.variational(X, Y, lambda, r)
 }
 }
